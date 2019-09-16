@@ -19,7 +19,6 @@ $screen-xs-max: $screen-xs -1 !default;
   padding: 9px 26px;
 }
 
-
 .product-options-cta{
   height:100px;
   display:flex;
@@ -64,7 +63,6 @@ $screen-xs-max: $screen-xs -1 !default;
   .product-title{
     margin: 5px;
   }
-
   .most-popular{
     margin-top:-60px;
     width:auto;
@@ -79,12 +77,11 @@ $screen-xs-max: $screen-xs -1 !default;
   .product-box-wrapper{
     margin:20px auto;
     .dollar-sign{ vertical-align:super; font-size:70%;  }
-
     padding: 3px 8px 8px;
 
     &.most-popular{
       //margin-top: 0; padding: 3px 8px 8px;
-      background-color: $algaecal-bluegreen;
+      background-color: $algaecal-bluefix;
       box-shadow: -1px 0px 13px 0px rgba(100, 100, 100, 0.75);
     }
 
@@ -113,7 +110,9 @@ $screen-xs-max: $screen-xs -1 !default;
       box-shadow: -1px 0px 13px 0px rgba(100,100,100,0.75);
       color: $black;
       text-align:center;
-
+      .you-save {
+        color: $red;
+      }
       h3{
         color:black;
         font-width:$font-weight-heavy;
@@ -173,9 +172,9 @@ $screen-xs-max: $screen-xs -1 !default;
   .product-box-wrapper.most-popular{ margin-top:-35px; }
 
   .most-popular{
-    .percent-off{
-      top:-61px;
-      right:14px;
+    .percent-off {
+      top: 297px;
+      right: 106px;
     }
   }
 }
