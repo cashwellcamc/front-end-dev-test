@@ -98,8 +98,9 @@ $screen-xs-max: $screen-xs -1 !default;
     .most-popular-label{
       text-transform:uppercase;
       color: $white;
+      font-size: 18px;
+      font-style: italic;
     }
-
     .product-box{
       display:flex;
       flex-direction:column;

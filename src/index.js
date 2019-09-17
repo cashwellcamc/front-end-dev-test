@@ -6,4 +6,15 @@ import 'bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
   loadSVGs();
+  document.getElementById("play-button-overlay-zwflowymel").addEventListener('click', () => {
+    _wq.push({
+      id: 'zwflowymel', onReady: function (video) {
+          video.play();
+      }
+     });
+    console.log('pressed Play');
+  });
+
+
+  
 });
