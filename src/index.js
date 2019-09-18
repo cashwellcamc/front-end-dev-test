@@ -6,15 +6,14 @@ import 'bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
   loadSVGs();
-  document.getElementById("play-button-overlay-zwflowymel").addEventListener('click', () => {
-    _wq.push({
-      id: 'zwflowymel', onReady: function (video) {
-          video.play();
-      }
-     });
-    console.log('pressed Play');
-  });
-
-
-  
+  // fetch('https://www.algaecal.com/wp-json/acf/v3/options/options')
+  //   .then(function(response) {
+  //     return response.json();
+  //   })
+  //   .then(function(obj) {
+  //     const paragraph = document.getElementById('paragraph');
+  //     if (paragraph !== null && obj.hasOwnProperty("1yr_short_copy") {
+  //         paragraph.textContent = obj['1yr_short_copy'];
+  //     } 
+  //   });
 });
