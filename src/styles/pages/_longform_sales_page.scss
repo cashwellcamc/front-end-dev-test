@@ -42,9 +42,15 @@ section {
   overflow:hidden;
 }
 .max-width-95{
-  max-width:95px;
+  max-width:95px; 
 }
-
+.left-ribbon { 
+  float:left;
+}
+.inlinestretch { 
+  width: 100%;
+  display:inline-block;
+}
 /*** COMMON REUSABLE STYLES ****/
 ul.blue-checkmarks {
   list-style: none;

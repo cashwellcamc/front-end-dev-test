@@ -4,16 +4,18 @@ import loadSVGs from './modules/svg-replace';
 import 'popper.js';
 import 'bootstrap';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { 
   loadSVGs();
-  // fetch('https://www.algaecal.com/wp-json/acf/v3/options/options')
-  //   .then(function(response) {
-  //     return response.json();
-  //   })
-  //   .then(function(obj) {
-  //     const paragraph = document.getElementById('paragraph');
-  //     if (paragraph !== null && obj.hasOwnProperty("1yr_short_copy") {
-  //         paragraph.textContent = obj['1yr_short_copy'];
-  //     } 
-  //   });
+  fetch('https://www.algaecal.com/wp-json/acf/v3/options/options')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+    const paragraph = document.getElementById('paragraph');
+    if (typeof(paragraph) != 'undefined' && paragraph != null)
+    {
+      paragraph.innerHTML = myJson.acf['1yr_short_copy'];
+    }
+  });
 });
