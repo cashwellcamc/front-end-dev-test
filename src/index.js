@@ -11,45 +11,40 @@ document.addEventListener('DOMContentLoaded', () => {
     return response.json();
   })
   .then(function(myJson) {
-    // console.log(JSON.stringify(myJson));
     const paragraph = document.getElementById('paragraph');
 
     if (typeof(paragraph) != 'undefined' && paragraph != null)
     {
       paragraph.innerHTML = myJson.acf['1yr_short_copy'];
     }
-    const hoursoperation = document.getElementById('hours-operation'); 
-    // if (typeof(hoursoperation) != 'undefined' && hoursoperation != null)
-    // {
-      console.log(myJson.acf['office_hours']);
-      console.log(myJson.acf['office_hours'][1]);
+    console.log(myJson.acf['office_hours']);
 
-      var d = new Date();
-      var dayOfWeek = d.getDay();
-      var hour = d.getHours();
-      console.log(d);
-      console.log(dayOfWeek);
-      console.log(hour);
+    var d = new Date(); 
+    var dayOfWeek = d.getDay();
+    var hour = d.getHours();
 
-      // const now = new Date().toLocaleTimeString('en-CA', {
-      //   timeZone: 'America/Vancouver', hour12: false, timeStyle: 'short'
-      //   }).replace(':','');
-      // console.log(now)
-      //}
-
-      // Show  element
-      var show = function (hoursoperation) {
-        hoursoperation.style.display = 'block';
-      };
-      // Hide an element
-      var hide = function (hoursoperation) {
-        hoursoperation.style.display = 'none';
-      };
-      
-      // const isActive = starting_time <= closing_time   // test the shift type (normal or inverted)
-      // ? (starting_time <= now && closing_time > now)   // normal comparison
-      // : (starting_time <= now || closing_time > now);  // inverted comparison
-      // console.log(isActive)
+    var d = new Date();
+    var day = d.getDay()
+    
+    var weekDay = myJson.acf['office_hours'].filter(x =>  x.day == day )
+    
+    var n = d.getHours();
+    var m = d.getMinutes();
+    
+    var starting_time = (parseInt(weekDay[0].starting_time) / 100) * 3600;
+    var closing_time  = (parseInt(weekDay[0].starting_time) / 100) * 3600; 
+    var now           = (parseInt(n+""+m) /100) * 3600
+                
+          const hoursoperation = document.getElementById('hours-operation')
+           
+          if(now>starting_time && now<closing_time){
+            
+           hoursoperation.style.display = 'block';
+            
+            
+          } else{
+             hoursoperation.style.display = 'none';
+          }
 
   });
 });
