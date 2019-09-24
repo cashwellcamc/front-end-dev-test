@@ -6,6 +6,9 @@ import 'bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => { 
   loadSVGs();
+  String.prototype.breakAt = function(breakAt) {
+    return this.substr(0,breakAt) + '<br/>' + this.substr(breakAt);
+  };
   fetch('https://www.algaecal.com/wp-json/acf/v3/options/options')
   .then(function(response) {
     return response.json();
@@ -15,14 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (typeof(populate) != 'undefined' && populate != null)
     {
-      populate.innerHTML = myJson.acf['7yr_full_copy'];
-
-      SevenFullCopy = myJson.acf['7yr_full_copy'].toString();
-
-      String.prototype.breakAt = function(breakAt) {
-        return this.substr(0,breakAt) + '<br/>' + this.substr(breakAt);
-      };
-      SevenFullCopy.breakAt(268); 
+      populate.innerHTML = myJson.acf['7yr_full_copy'].toString().breakAt(268);
     }
 
     console.log(myJson.acf['office_hours']);

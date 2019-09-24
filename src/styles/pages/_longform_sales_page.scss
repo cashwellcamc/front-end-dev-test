@@ -52,7 +52,7 @@ section {
   display:inline-block;
 }
 .centerwrap {  
-  width: 510px;
+  width: 535px;
   margin: 0 auto;
 }
 #deanNeuls {
@@ -60,11 +60,33 @@ section {
 }
 .sign-text {
   float: right;
-  width: 194px;
   font-size: 16px;
+  padding-top:20px;
+  ul li {
+    list-style-type:none;
+  }
 }
-.sign-text ul li {
-  list-style-type:none;
+.floatLeft { 
+  float:left;
+}
+.floatRight {  
+  float:right;
+}
+.modal-body { 
+  img { width: 100%;}
+}
+.g-Seal { 
+  padding-right: 45px;
+}
+#signd { 
+  padding-right: 35px;
+  padding-top:18px;
+}
+#paragraph {
+  font-size: 18px;
+  width: 90%;
+  padding: 10px;
+  padding-top: 25px;
 }
 /*** COMMON REUSABLE STYLES ****/
 ul.blue-checkmarks {
@@ -95,8 +117,6 @@ ul.blue-checkmarks {
     margin-right: 0.5em;
   }
 }
-
-
 section.introduction {
   color:$algaecal-bluegreen-dark;
   background: url(/sp/assets/img/blue-bg-header.png)no-repeat top center;
