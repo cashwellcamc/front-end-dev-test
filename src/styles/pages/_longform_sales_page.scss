@@ -88,6 +88,12 @@ section {
   padding: 10px;
   padding-top: 25px;
 }
+#scientificReferences { 
+  -webkit-transition: all 1s ease 0.5s;
+  -moz-transition: all 1s ease 0.5s;
+  -o-transition: all 1s ease 0.5s;
+  transition: all 1s ease 0.5s;
+}
 /*** COMMON REUSABLE STYLES ****/
 ul.blue-checkmarks {
   list-style: none;
