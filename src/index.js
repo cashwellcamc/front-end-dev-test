@@ -11,28 +11,32 @@ document.addEventListener('DOMContentLoaded', () => {
     return response.json();
   })
   .then(function(myJson) {
-    const paragraph = document.getElementById('paragraph');
+    const populate = document.getElementById('populate');
 
-    if (typeof(paragraph) != 'undefined' && paragraph != null)
+    if (typeof(populate) != 'undefined' && populate != null)
     {
-      paragraph.innerHTML = myJson.acf['1yr_short_copy'];
-    }
-    console.log(myJson.acf['office_hours']);
+      populate.innerHTML = myJson.acf['7yr_full_copy'];
 
-    var d = new Date(); 
-    var dayOfWeek = d.getDay();
-    var hour = d.getHours();
+      SevenFullCopy = myJson.acf['7yr_full_copy'].toString();
+
+      String.prototype.breakAt = function(breakAt) {
+        return this.substr(0,breakAt) + '<br/>' + this.substr(breakAt);
+      };
+      SevenFullCopy.breakAt(268); 
+    }
+
+    console.log(myJson.acf['office_hours']);
 
     var d = new Date();
     var day = d.getDay()
     
-    var weekDay = myJson.acf['office_hours'].filter(x =>  x.day == day )
+    var weekDay = myJson.acf['office_hours'].filter(x =>  x.day == day)
     
     var n = d.getHours();
     var m = d.getMinutes();
     
     var starting_time = (parseInt(weekDay[0].starting_time) / 100) * 3600;
-    var closing_time  = (parseInt(weekDay[0].starting_time) / 100) * 3600; 
+    var closing_time  = (parseInt(weekDay[0].closing_time) / 100) * 3600; 
     var now           = (parseInt(n+""+m) /100) * 3600
                 
           const hoursoperation = document.getElementById('hours-operation')
@@ -41,10 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
            hoursoperation.style.display = 'block';
             
-            
-          } else{
+          } else {
              hoursoperation.style.display = 'none';
           }
-
   });
 });

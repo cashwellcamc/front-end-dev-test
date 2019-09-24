@@ -44,12 +44,27 @@ section {
 .max-width-95{
   max-width:95px; 
 }
-.left-ribbon { 
+.left-ribbon {
   float:left;
 }
 .inlinestretch { 
   width: 100%;
   display:inline-block;
+}
+.centerwrap {  
+  width: 510px;
+  margin: 0 auto;
+}
+#deanNeuls {
+  border-radius: 60px;
+}
+.sign-text {
+  float: right;
+  width: 194px;
+  font-size: 16px;
+}
+.sign-text ul li {
+  list-style-type:none;
 }
 /*** COMMON REUSABLE STYLES ****/
 ul.blue-checkmarks {

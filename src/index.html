@@ -77,20 +77,29 @@
     </div>
 </section>
 
-<section class="container guarantee-section">
+<section class="container guarantee-section"><!-- Guarantee -->
     <div class="text-center">
         <p>I Saved The Best News for Last..</p>
         <h2 class="green">Our Stronger Bones for 7 years Guarantee</h2>
     </div>
     <div class="left-ribbon">
-        <img src="/assets/img/guarantee_seal.png" alt="Guarantee Seal">
+        <img src="/assets/img/guarantee_seal.png" alt="Guarantee Seal" class="g-Seal">
     </div>
     <div class="right_ribbon">
-        <p id="paragraph"></p>
+        <p id="paragraph">When you follow directions for use of AlgaeCal Plus and Strontium Boost - we guarantee you will see increased bone density in EVERY follow-up bone scan you have while using these 2 products - or we will refund every penny you paid for our products between your scans. This guarantee extends to every scan you have for the next 7 years! Also, if you are unsatisfied at any time you can return my product for a full refund, no questions asked! <a href="#guaranteeModal" data-toggle="modal" data-target="#guaranteeModal">Click Here for Details</a></p>
     </div>
     <div class="row align-items-center inlinestretch">
-        <img src="/assets/img/signature.png" alt="Signature" class="floatLeft">
-        <img src="/assets/img/dean-face.jpg" alt="Dean Neuls" class="floatLeft">
+        <div class="centerwrap">
+        <img src="/assets/img/signature.png" alt="Signature" class="floatLeft" id="signd">
+        <img src="/assets/img/dean-face.jpg" alt="Dean Neuls" class="floatLeft" id="deanNeuls">
+        <div class="sign-text">
+            <ul>
+            <li class="font-weight-bold">Dean Neuls,</li>
+            <li>CEO and Co-Founder,</li>
+            <li>AlgaeCal Inc.</li>
+            </ul>
+        </div>
+        </div> 
     </div>
 </section>
 
@@ -843,6 +852,23 @@
         </div>
     </div>
 </div>
+
+<!-- Guarantee Modal -->
+<div aria-labelledby="guaranteeModal-label" class="modal fade" id="guaranteeModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h3 class="modal-title"></h3>
+    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body" id="populate">
+    </div>
+    </div>
+    </div>
+</div>
+
 <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-modal.js"></script>
 </body>
 </html>
